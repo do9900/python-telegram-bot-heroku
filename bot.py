@@ -29,6 +29,8 @@ TOKEN = '1765966528:AAFyQC9yHoScAQBgtxwLU4EHx1auQOw_I1g'
 def start(update, context):
     """Send a message when the command /start is issued."""
     USER = update.effective_user.first_name
+    print("USER: ",USER)
+    sys.stdout.flush()
     if len(context.args) > 0:
         key = context.args[0]
         SITE = 'CRIPTOMONEDA SITE'
@@ -59,6 +61,8 @@ def site(update, context):
         )
 
 def help(update, context):
+    print("HELP!")
+    sys.stdout.flush()
     """Send a message when the command /help is issued."""
     context.bot.send_message(update.message.chat_id, text='¡Lo siento!, seguimos en desarrollo.')
     # update.message.reply_text('Help!')
